@@ -15,7 +15,7 @@ const slashRegister = async () => {
                 //=================================================================================================//
 
                 new Discord.SlashCommandBuilder()
-                .setName('WLWerdykt')
+                .setName('wlwerdykt')
                 .setDescription('Wyślij wiadomość o zdaniu whitelist przez gracza')
                 .addChannelOption(option => {
                     return option 

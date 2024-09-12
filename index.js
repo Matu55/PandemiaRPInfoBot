@@ -64,7 +64,7 @@ client.on("interactionCreate", async (interaction) => {
 
   //=================================================================================================//
 
-  if(interaction.commandName === "WLWerdykt") {
+  if(interaction.commandName === "wlwerdykt") {
     const Channel = client.channels.cache.get(interaction.options.getChannel("kanal").id); 
 
     if (Channel) {
