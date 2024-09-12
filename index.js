@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.send("Hello World! This is info bot made for Pandemia RP");
 });
 
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 
 const client = new Discord.Client({ intents: [ Discord.GatewayIntentBits.Guilds, Discord.GatewayIntentBits.GuildMessages, Discord.GatewayIntentBits.MessageContent, Discord.GatewayIntentBits.GuildMembers ], partials: [Discord.Partials.Message, Discord.Partials.Channel, Discord.Partials.Reaction] })
 
@@ -22,6 +22,10 @@ const dojChannelID = process.env['dojChannelID'];
 
 client.on("ready", () => {
   console.log("Bot jest gotowy!");
+
+  if (commands) {
+    console.log("Plik z komendami wczytany // sprawdź czy nie ma żadnych błędą wyżej w konsoli")
+  }
 })
 
 client.on("messageCreate", (message) => {
